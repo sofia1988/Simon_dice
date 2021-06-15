@@ -3,7 +3,7 @@ const purple = document.getElementById('purple')
 const orange = document.getElementById('orange')
 const green = document.getElementById('green')
 const start = document.getElementById('start')
-const last_level = 1
+const last_level = 3
 
 class games {
   constructor() {
@@ -95,26 +95,29 @@ class games {
     this.illuminate_color(name_color)
     if (number_color === this.sequence[this.sub_level]) {
       this.sub_level++
-      if(this.sub_level === this.lvl)
-      this.nivel++
+      if(this.sub_level === this.lvl){
+      this.lvl++
       this.delete_click_events()
       if (this.lvl === (last_level + 1)) {
         this.win_game()
       } else {
-      setTimeout(this.next_level, 1500)
+      setTimeout(this.next_level(), 1500)
       }
+     }
     } else {
       this.lost_game()
      }
     
   } 
+
   win_game() {
-    swal ('Ganaste', 'success')
+    swal ('Simon Dice','Felicidades', 'success')
     .then(this.initialize)
   }
+
   lost_game () {
-    swal ('Perdiste', 'success')
-    .then( () =>{
+    swal ('Simon Dice','Perdiste', 'success')
+    .then(() =>{
      this.delete_click_events()
      this.initialize()
     })
@@ -123,4 +126,3 @@ class games {
 function start_game(){
   // debugger
 window.game = new games()
-}
