@@ -126,3 +126,4 @@ class games {
 function start_game(){
   // debugger
 window.game = new games()
+}
