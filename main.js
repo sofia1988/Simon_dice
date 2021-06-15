@@ -3,7 +3,7 @@ const purple = document.getElementById('purple')
 const orange = document.getElementById('orange')
 const green = document.getElementById('green')
 const start = document.getElementById('start')
-const last_level = 3
+const last_level = 10
 
 class games {
   constructor() {
