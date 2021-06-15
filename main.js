@@ -101,7 +101,7 @@ class games {
       if (this.lvl === (last_level + 1)) {
         this.win_game()
       } else {
-      setTimeout(this.next_level(), 1500)
+      setTimeout(this.next_level, 1500)
       }
      }
     } else {
@@ -124,6 +124,6 @@ class games {
   }
 }
 function start_game(){
-  // debugger
+  //  debugger
 window.game = new games()
 }
