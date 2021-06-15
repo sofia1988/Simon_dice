@@ -116,7 +116,7 @@ class games {
   }
 
   lost_game () {
-    swal ('Simon Dice','Perdiste', 'success')
+    swal ('Simon Dice','Perdiste', 'error')
     .then(() =>{
      this.delete_click_events()
      this.initialize()
